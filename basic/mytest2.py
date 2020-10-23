@@ -1,4 +1,4 @@
-#
+#10月６日　第二次ｐｙｔｈｏｎ课程
 # import  json
 # print("--------------格式化输出------------")
 # print("aaa{1},bbb{2}".format(1,2,3))
@@ -170,12 +170,13 @@
 #
 # #第一行定义了全局变量，在内部函数中又对外部函数进行了引用并修改，
 # # 那么python会认为它是一个局部变量，有因为内部函数没有对其gcount进行定义和赋值，所以报错。
-# # gcount = 0
-# # def global_test():
-# #     gcount+=1
-# #     print (gcount)
-# # global_test()
-#
+# gcount=0
+# def global_test():
+#     global  gcount
+#     gcount +=1
+#     print (gcount)
+# global_test()
+
 #
 # gcount = 0
 #
@@ -183,7 +184,7 @@
 #     global gcount
 #     gcount += 1
 #     print(gcount)
-#
+# #
 # global_test()
 # # 如果局部不声明全局变量，并且不修改全局变量，则可以正常使用
 # gcount = 0
@@ -231,23 +232,50 @@
 #迭代器的本质
 
 
-def fab(max):
-    n, a, b = 0, 0, 1
-    while n < max:
-        yield b  # 使用 yield
-        # print b
-        a, b = b, a + b
-        n = n + 1
+# def fab(max):
+#     n, a, b = 0, 0, 1
+#     while n < max:
+#         yield b  # 使用 yield
+#         # print b
+#         a, b = b, a + b
+#         n = n + 1
+#
+#
+# for n in fab(5):
+#     print(n)
 
 
-for n in fab(5):
-    print(n)
+# def show_for_in_yield():
+#     yield_value1 = yield 'send'   #1
+#     print("yield1  :"+str(yield_value1))
+#
+#     yield_value2 = yield 'sen' #2
+#     print("yield2  :"+str(yield_value2))
+#
+#
+# sfy = show_for_in_yield()
+# try:
+#     for i in sfy:  #a
+# 	if i == 'send':
+# 	    #x=sfy.send(100) #b
+# 	    pass
+# 	print(i)
+# except Exception as exp:
+#     print(exp)
 
 
+#因为生成器每次只生成当前使用的部分,所以在第一次进入for时只有一个,执行完毕#1后#2生成,执行2
+#
+# def show_yield(num):
+#     yield 12
+#
+# # show_yield(1)
+# # 这样没有反应
+# # 只有这样
+# for i in show_yield(1):
+#     print(i)
+# # 这样会打印出12
 
 
-
-
-
-
-
+def  xxx():
+    print("xxxx")
