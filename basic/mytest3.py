@@ -1,18 +1,22 @@
 # 10月２３日
 # yelid的使用
 #send 送进去　　yield　扔出去
+
 # def xxx():
+#     global  m
 #     print("xxx")
-#     x=yield 2
+#     m=yield 2
 #     # print(x)
-#     x=yield 3
+#     m=yield 3
 #     # print(x)
 # x=xxx()
 # # print(type(x))  #<class 'generator'>
 # y=next(x)
+# # print(m)
 # print(y)
 # y=x.send(6)
-# # print(type(y))  #<class 'int'>
+# print(m)
+# # # print(type(y))  #<class 'int'>
 # print(y)
 # y=next(x)
 # print(y)
@@ -81,13 +85,14 @@
 
 
 #装饰器   天生的ＡＯＰ
-def fun(f):
-    print("-------------")
-    f()
-    print("==============")
-@fun
-def ff():
-    print("xxx")
+# def fun(f):
+#     print("-------------")
+#     f()
+#     print("==============")
+# @fun
+# def ff():
+#     print("xxx")
+
 
 # fun(ff) 等同于上面的@fun
 

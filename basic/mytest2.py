@@ -141,7 +141,7 @@
 #         # nonlocal num
 #         print("outer1",num)
 #         def yyy():
-#             # nonlocal num
+#             nonlocal num
 #             num=20
 #             print("inner1",num)
 #         yyy()
@@ -150,23 +150,36 @@
 #     print("outer2",num)
 # # print(num)
 # zzz()
-#
-#
+#outer1 5
+#inner1 20
+#outer2 5
+# ===========================
+#outer1 5
+#inner1 20
+#outer2 20
 #
 # print("----------------------------------------")
-# num=5
-# def zzz():
-#     def xxx():
-#         def yyy():
-#             # global num
-#             num=20
-#             print("inner",num)
-#         yyy()
-#     xxx()
-#     print("outer1",num)
-# print("outer2",num)
-# zzz()
+num=5
+def zzz():
+    def xxx():
+        def yyy():
+            global num
+            num=20
+            print("inner",num)
+        yyy()
+    xxx()
+    print("outer1",num)
+print("outer2",num)
+zzz()
 #
+# outer2 5
+# inner 20
+# outer1 5
+# 0
+# outer2 5
+# inner 20
+# outer1 20
+
 #
 # #第一行定义了全局变量，在内部函数中又对外部函数进行了引用并修改，
 # # 那么python会认为它是一个局部变量，有因为内部函数没有对其gcount进行定义和赋值，所以报错。
@@ -276,6 +289,6 @@
 #     print(i)
 # # 这样会打印出12
 
-
-def  xxx():
-    print("xxxx")
+#
+# def  xxx():
+#     print("xxxx")
