@@ -3,22 +3,21 @@
 #send 送进去　　yield　扔出去
 
 # def xxx():
-#     global  m
 #     print("xxx")
-#     m=yield 2
-#     # print(x)
-#     m=yield 3
-#     # print(x)
+#     yield 2
+#     yield 3
+#
+#
+#
 # x=xxx()
-# # print(type(x))  #<class 'generator'>
+# print(type(x))  #<class 'generator'>
 # y=next(x)
-# # print(m)
 # print(y)
 # y=x.send(6)
-# print(m)
-# # # print(type(y))  #<class 'int'>
+# print(type(y))  #<class 'int'>
 # print(y)
 # y=next(x)
+# print(m)
 # print(y)
 # y=next(x)
 # print(y)
@@ -68,15 +67,15 @@
 # print(p.xxx(1,2))
 #解释型语言就是解释一句执行一句　编译类型语言就是　将一个语言解释为另一个语言
 
-
+#
 # class TT:
 #     x=1
 #     def xxx(self):
 #         pass
 # print(vars(TT))  #这两句话效果一样
-# # print(TT.__dict__)
+# print(TT.__dict__)
 # t=TT
-# # t.yyy=1
+# t.yyy=1
 # t.x=1
 # print(vars(t))
 
@@ -85,13 +84,13 @@
 
 
 #装饰器   天生的ＡＯＰ
-# def fun(f):
-#     print("-------------")
-#     f()
-#     print("==============")
-# @fun
-# def ff():
-#     print("xxx")
+def fun(f):
+    print("-------------")
+    f()
+    print("==============")
+@fun
+def ff():
+    print("xxx")
 
 
 # fun(ff) 等同于上面的@fun

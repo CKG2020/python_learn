@@ -6,8 +6,8 @@
 # # print(t.a)
 # # print(t.b)
 # print(vars(t))
-# # {'b': 'yyy', 'a': 'xxx'}
-# # 类似做出私有属性的感觉　　＿＿ａ不能直接点出来
+# # # {'b': 'yyy', 'a': 'xxx'}
+# # # 类似做出私有属性的感觉　　＿＿ａ不能直接点出来
 # class  T:
 #     def  __init__(self,a,b):
 #         self.__a=a

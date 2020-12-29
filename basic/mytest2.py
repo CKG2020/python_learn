@@ -1,10 +1,10 @@
 #10月６日　第二次ｐｙｔｈｏｎ课程
-# import  json
+import  json
 # print("--------------格式化输出------------")
 # print("aaa{1},bbb{2}".format(1,2,3))
-# print("---------引入ｊｓｏｎ－－－－－－－－－－－")
+# # print("---------引入ｊｓｏｎ－－－－－－－－－－－")
 # a={"aaa":1,"yyy":22}
-# # 转换为ｊｓｏｎ
+# # # 转换为ｊｓｏｎ
 # print(a)
 # print(type(a))
 # b=json.dumps(a)
@@ -53,13 +53,13 @@
 # print(type(str2))
 #
 # # 神奇的ｅｌｓｅ
-# i=0
-# while i<10:
-#     print(i)
-#     i+=1
-# else:
-#     print("zzzzz",i)
-#
+i=0
+while i<10:
+    print(i)
+    i+=1
+else:
+    print("zzzzz",i)
+
 #
 #     for i in range(10):
 #         print(i)
@@ -159,18 +159,18 @@
 #outer2 20
 #
 # print("----------------------------------------")
-num=5
-def zzz():
-    def xxx():
-        def yyy():
-            global num
-            num=20
-            print("inner",num)
-        yyy()
-    xxx()
-    print("outer1",num)
-print("outer2",num)
-zzz()
+# num=5
+# def zzz():
+#     def xxx():
+#         def yyy():
+#             global num
+#             num=20
+#             print("inner",num)
+#         yyy()
+#     xxx()
+#     print("outer1",num)
+# print("outer2",num)
+# zzz()
 #
 # outer2 5
 # inner 20
