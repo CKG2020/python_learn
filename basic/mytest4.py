@@ -1,21 +1,21 @@
 # class  T:
 #     def  __init__(self,a,b):
 #         self.a=a
-#         self.b=b
-# t=T("xxx","yyy")
-# # print(t.a)
-# # print(t.b)
-# print(vars(t))
-# # # {'b': 'yyy', 'a': 'xxx'}
-# # # 类似做出私有属性的感觉　　＿＿ａ不能直接点出来
-# class  T:
-#     def  __init__(self,a,b):
-#         self.__a=a
-#         self.b=b
-# t=T("xxx","yyy")
-# print(vars(t))
-# # {'b': 'yyy', '_T__a': 'xxx'}
-# print(t._T__a)
+        self.b=b
+t=T("xxx","yyy")
+# print(t.a)
+# print(t.b)
+print(vars(t))
+# # {'b': 'yyy', 'a': 'xxx'}
+# # 类似做出私有属性的感觉　　＿＿ａ不能直接点出来
+class  T:
+    def  __init__(self,a,b):
+        self.__a=a
+        self.b=b
+t=T("xxx","yyy")
+print(vars(t))
+# {'b': 'yyy', '_T__a': 'xxx'}
+print(t._T__a)
 
 # class A:
 #     def xxx(self):
