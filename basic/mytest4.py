@@ -1,6 +1,6 @@
-# class  T:
-#     def  __init__(self,a,b):
-#         self.a=a
+class  T:
+    def  __init__(self,a,b):
+        self.a=a
         self.b=b
 t=T("xxx","yyy")
 # print(t.a)
